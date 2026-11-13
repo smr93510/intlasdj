@@ -1,0 +1,262 @@
+[hook] Dispatcher handler installed 00:26:31
+[hook] Dispatcher handler installed 00:26:45
+[hook] Dispatcher handler installed 16:44:31
+[hook] Dispatcher handler installed 16:44:50
+[hook] Dispatcher handler installed 17:01:11
+[hook] Dispatcher handler installed 17:01:33
+[hook] Dispatcher handler installed 18:03:16
+[hook] Dispatcher handler installed 18:03:38
+[hook] Dispatcher handler installed 18:09:24
+[hook] Dispatcher handler installed 18:09:44
+[hook] Dispatcher handler installed 18:13:53
+[hook] Dispatcher handler installed 18:14:14
+[hook] Dispatcher handler installed 18:21:46
+[hook] Dispatcher handler installed 18:22:05
+
+==== DispatcherUnhandledException 19:02:38 ====
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at VolAnalysis.Proxies.ConcreteProxy.ProxyRemoteServer()
+   at VolAnalysis.Proxies.ConcreteProxy.StopCalculator()
+   at VolAnalysis.Registry.DetailedReg.StoreDynamicDictionary()
+   at VolAnalysis.Registry.DetailedReg.SaveBasicMember(WrapperStreamingContextStates config, Boolean createcol, RemoteNotifierConnection dir, Boolean overrideattr2, Int32 mean_res3)
+   at VolAnalysis.Registry.DetailedReg.SaveDetailedAnnotation(WrapperEvaluator spec, WrapperStreamingContextStates counter, String control)
+   at VolAnalysis.Registry.DetailedReg.CloseWriter()
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__124_0(Object state)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+
+==== AppDomain.UnhandledException 19:02:38 ====
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at VolAnalysis.Proxies.ConcreteProxy.ProxyRemoteServer()
+   at VolAnalysis.Proxies.ConcreteProxy.StopCalculator()
+   at VolAnalysis.Registry.DetailedReg.StoreDynamicDictionary()
+   at VolAnalysis.Registry.DetailedReg.SaveBasicMember(WrapperStreamingContextStates config, Boolean createcol, RemoteNotifierConnection dir, Boolean overrideattr2, Int32 mean_res3)
+   at VolAnalysis.Registry.DetailedReg.SaveDetailedAnnotation(WrapperEvaluator spec, WrapperStreamingContextStates counter, String control)
+   at VolAnalysis.Registry.DetailedReg.CloseWriter()
+   at System.Threading.Tasks.Task.<>c.<ThrowAsync>b__124_0(Object state)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   at System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   at MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Threading.DispatcherOperation.Invoke()
+   at System.Windows.Threading.Dispatcher.ProcessQueue()
+   at System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   at System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   at System.Windows.Threading.Dispatcher.Invoke(DispatcherPriority priority, Delegate method, Object arg)
+   at MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   at System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   at System.Windows.Application.RunDispatcher(Object ignore)
+   at System.Windows.Application.RunInternal(Window window)
+   at Deepchart.Viewers.ViewerSolver.ViewFilteredNotifier()
+   at <PrivateImplementationDetails>{F6E551CC-BEB0-49F1-8210-4FE02BC2F544}.Main()
+IsTerminating=True
+---- statics of License.Status ----
+  m_IsGroupedRole : Boolean = True
+  _IsComparatorCollection : Boolean = True
+  m_IsSequentialModuleProxy : Boolean = True
+  isDynamicGeneratorProxy : Boolean = True
+  m_IsResponderReporter : Boolean = True
+  isSortedClientProxy : Boolean = True
+  m_FlexibleStateProxyValue : Int32 = 100
+  transformableTagProxyDepth : Int32 = 100
+  m_PassiveCalculatorProxyTag : String = A1F7-B134-707C-2FFA-578B
+  m_SimpleWriterTxt : String = 00000000-0000-0000-0000-000000000001
+  _FilteredValueValue : Int32 = 100
+  m_ProxySpecWrapperValue : Int32 = 100
+  _GeneratorTaskCap : Int32 = 100
+  chainError : ProxyProfilePropertyType = Trial_Days
+  dispatcherParser : DateTime = 2036/10/5 18:21:44
+  proxyWrapperStrategys : SortedList = SortedList count=17
+  proxyStrategyRecommenders : Byte[] = byte[0] 
+  m_IsOrderedSolverProxy : Boolean = True
+  isCentralGatewayProxy : Boolean = True
+  _ProxyRecommenderExplorer : AlphabeticTransformerExplorer = <null>
+  proxyExplorerTracer : AggregatorClientMember = <null>
+  _TracerAllocatorProxy : MemberBufferProfile = <null>
+  transformableParameter : ExternalSingletonDecorator = <null>
+  SetRecommenderEncryptor : Status = <null>
+---- statics of VolAnalysis.Handling.ScheduledHandler ----
+  PushServer : ScheduledHandler = <null>
+[hook] Dispatcher handler installed 14:57:21
+[hook] Dispatcher handler installed 14:57:41
+[hook] Dispatcher handler installed 13:21:11
+[hook] Dispatcher handler installed 13:21:39
+[hook] Dispatcher handler installed 13:25:55
+[hook] Dispatcher handler installed 00:56:02
+[hook] Dispatcher handler installed 00:56:25
+[hook] Dispatcher handler installed 01:11:00
+[hook] Dispatcher handler installed 01:23:52
+[hook] Dispatcher handler installed 01:25:58
+[hook] Dispatcher handler installed 01:30:34
+[hook] Dispatcher handler installed 01:33:45
+[hook] Dispatcher handler installed 01:34:30
+
+==== AppDomain.UnhandledException 01:39:01 ====
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.Exception: Deepchart 
+   at Deepchart.Execution.DividedAuthenticatorRunner.GroupedFormatterExplorer.FormatBuffer(Boolean& var1)
+   at Deepchart.Execution.DividedAuthenticatorRunner.GroupedFormatterExplorer.CheckAttachedEditor()
+   at Deepchart.Execution.DividedAuthenticatorRunner.RunScheduledResolver[T](Int32 reference, Object[] col, Object template, T& spec2)
+   at Deepchart.Execution.DividedAuthenticatorRunner.RunScopeModule(Int32 instance, Object[] caller, Object temp)
+   at Deepchart.Viewers.ViewerVerifierRecommender.DisplayModularError(Stream instance)
+   at Deepchart.Viewers.ViewerVerifierRecommender.AddSet(Int32 column_res)
+   at Deepchart.Execution.RunnerPolicySelector.SimpleValueConnection..ctor()
+   at Deepchart.Wrapping.ScalableWrapperWrapper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type)
+   at Deepchart.Viewers.ViewerSolver.ViewFilteredNotifier()
+   at <PrivateImplementationDetails>{F6E551CC-BEB0-49F1-8210-4FE02BC2F544}.Main()
+IsTerminating=True
+---- statics of License.Status ----
+  m_IsGroupedRole: <throw TargetInvocationException>
+  _IsComparatorCollection: <throw TargetInvocationException>
+  m_IsSequentialModuleProxy: <throw TargetInvocationException>
+  isDynamicGeneratorProxy: <throw TargetInvocationException>
+  m_IsResponderReporter: <throw TargetInvocationException>
+  isSortedClientProxy: <throw TargetInvocationException>
+  m_FlexibleStateProxyValue: <throw TargetInvocationException>
+  transformableTagProxyDepth: <throw TargetInvocationException>
+  m_PassiveCalculatorProxyTag: <throw TargetInvocationException>
+  m_SimpleWriterTxt: <throw TargetInvocationException>
+  _FilteredValueValue: <throw TargetInvocationException>
+  m_ProxySpecWrapperValue: <throw TargetInvocationException>
+  _GeneratorTaskCap: <throw TargetInvocationException>
+  chainError: <throw TargetInvocationException>
+  dispatcherParser: <throw TargetInvocationException>
+  proxyWrapperStrategys: <throw TargetInvocationException>
+  proxyStrategyRecommenders: <throw TargetInvocationException>
+  m_IsOrderedSolverProxy: <throw TargetInvocationException>
+  isCentralGatewayProxy: <throw TargetInvocationException>
+  _ProxyRecommenderExplorer: <throw TargetInvocationException>
+  proxyExplorerTracer: <throw TargetInvocationException>
+  _TracerAllocatorProxy: <throw TargetInvocationException>
+  transformableParameter: <throw TargetInvocationException>
+  SetRecommenderEncryptor: <throw TargetInvocationException>
+---- statics of VolAnalysis.Handling.ScheduledHandler ----
+  PushServer : ScheduledHandler = <null>
+[hook] Dispatcher handler installed 01:42:07
+[hook] Dispatcher handler installed 01:45:23
+[hook] Dispatcher handler installed 01:46:21
+[hook] Dispatcher handler installed 01:49:12
+[hook] Dispatcher handler installed 01:50:36
+[hook] Dispatcher handler installed 01:52:59
+[hook] Dispatcher handler installed 01:53:21
+[hook] Dispatcher handler installed 01:56:56
+[hook] Dispatcher handler installed 01:59:36
+[hook] Dispatcher handler installed 01:59:58
+
+==== AppDomain.UnhandledException 02:02:08 ====
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.Exception: Deepchart 
+   at Deepchart.Execution.DividedAuthenticatorRunner.GroupedFormatterExplorer.FormatBuffer(Boolean& var1)
+   at Deepchart.Execution.DividedAuthenticatorRunner.GroupedFormatterExplorer.CheckAttachedEditor()
+   at Deepchart.Execution.DividedAuthenticatorRunner.RunScheduledResolver[T](Int32 reference, Object[] col, Object template, T& spec2)
+   at Deepchart.Execution.DividedAuthenticatorRunner.RunScopeModule(Int32 instance, Object[] caller, Object temp)
+   at Deepchart.Viewers.ViewerVerifierRecommender.DisplayModularError(Stream instance)
+   at Deepchart.Viewers.ViewerVerifierRecommender.AddSet(Int32 column_res)
+   at Deepchart.Execution.RunnerPolicySelector.SimpleValueConnection..ctor()
+   at Deepchart.Wrapping.ScalableWrapperWrapper..ctor()
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+   at System.ComponentModel.LicenseManager.ValidateInternalRecursive(LicenseContext context, Type type, Object instance, Boolean allowExceptions, License& license, String& licenseKey)
+   at System.ComponentModel.LicenseManager.Validate(Type type)
+   at Deepchart.Viewers.ViewerSolver.ViewFilteredNotifier()
+   at <PrivateImplementationDetails>{F6E551CC-BEB0-49F1-8210-4FE02BC2F544}.Main()
+IsTerminating=True
+---- statics of License.Status ----
+  m_IsGroupedRole: <throw TargetInvocationException>
+  _IsComparatorCollection: <throw TargetInvocationException>
+  m_IsSequentialModuleProxy: <throw TargetInvocationException>
+  isDynamicGeneratorProxy: <throw TargetInvocationException>
+  m_IsResponderReporter: <throw TargetInvocationException>
+  isSortedClientProxy: <throw TargetInvocationException>
+  m_FlexibleStateProxyValue: <throw TargetInvocationException>
+  transformableTagProxyDepth: <throw TargetInvocationException>
+  m_PassiveCalculatorProxyTag: <throw TargetInvocationException>
+  m_SimpleWriterTxt: <throw TargetInvocationException>
+  _FilteredValueValue: <throw TargetInvocationException>
+  m_ProxySpecWrapperValue: <throw TargetInvocationException>
+  _GeneratorTaskCap: <throw TargetInvocationException>
+  chainError: <throw TargetInvocationException>
+  dispatcherParser: <throw TargetInvocationException>
+  proxyWrapperStrategys: <throw TargetInvocationException>
+  proxyStrategyRecommenders: <throw TargetInvocationException>
+  m_IsOrderedSolverProxy: <throw TargetInvocationException>
+  isCentralGatewayProxy: <throw TargetInvocationException>
+  _ProxyRecommenderExplorer: <throw TargetInvocationException>
+  proxyExplorerTracer: <throw TargetInvocationException>
+  _TracerAllocatorProxy: <throw TargetInvocationException>
+  transformableParameter: <throw TargetInvocationException>
+  SetRecommenderEncryptor: <throw TargetInvocationException>
+---- statics of VolAnalysis.Handling.ScheduledHandler ----
+  PushServer : ScheduledHandler = <null>
+[hook] Dispatcher handler installed 02:02:54
+[hook] Dispatcher handler installed 02:03:15
+[hook] Dispatcher handler installed 02:04:18
+[hook] Dispatcher handler installed 02:04:39
+[hook] Dispatcher handler installed 02:07:57
+[hook] Dispatcher handler installed 02:10:58
+[hook] Dispatcher handler installed 02:11:20
+[hook] Dispatcher handler installed 02:14:48
+[hook] Dispatcher handler installed 02:18:03
+[hook] Dispatcher handler installed 02:20:53
+[hook] Dispatcher handler installed 02:21:14
+[hook] Dispatcher handler installed 02:26:26
+[hook] Dispatcher handler installed 02:26:49
+[hook] Dispatcher handler installed 02:29:24
+[hook] Dispatcher handler installed 02:32:49
+[hook] Dispatcher handler installed 02:35:43
+[hook] Dispatcher handler installed 11:08:50
+[hook] Dispatcher handler installed 11:09:10
+[hook] Dispatcher handler installed 11:12:45
+[hook] Dispatcher handler installed 11:13:03
+[hook] Dispatcher handler installed 11:17:58
+[hook] Dispatcher handler installed 11:20:48
+[hook] Dispatcher handler installed 11:21:09
+[hook] Dispatcher handler installed 11:27:49
+[hook] Dispatcher handler installed 11:29:35
+[hook] Dispatcher handler installed 11:29:53
+[hook] Dispatcher handler installed 11:30:42
+[hook] Dispatcher handler installed 11:30:59
+[hook] Dispatcher handler installed 11:31:49
+[hook] Dispatcher handler installed 11:32:04
+[hook] Dispatcher handler installed 11:32:56
+[hook] Dispatcher handler installed 11:33:11
+[hook] Dispatcher handler installed 11:35:32
+[hook] Dispatcher handler installed 11:35:55
+[hook] Dispatcher handler installed 11:37:57
+[hook] Dispatcher handler installed 11:41:01
+[hook] Dispatcher handler installed 11:41:19
+[hook] Dispatcher handler installed 11:44:02
+[hook] Dispatcher handler installed 11:44:21
+[hook] Dispatcher handler installed 11:46:57
+[hook] Dispatcher handler installed 11:47:17
+[hook] Dispatcher handler installed 11:48:15
+[hook] Dispatcher handler installed 11:48:30
+[hook] Dispatcher handler installed 11:54:55
+[hook] Dispatcher handler installed 11:55:15
+[hook] Dispatcher handler installed 12:00:10
+[hook] Dispatcher handler installed 12:00:30
+[hook] Dispatcher handler installed 12:01:29
+[hook] Dispatcher handler installed 12:01:44
+[hook] Dispatcher handler installed 12:08:02
+[hook] Dispatcher handler installed 12:08:21
+[hook] Dispatcher handler installed 12:13:38
+[hook] Dispatcher handler installed 12:15:35
+[hook] Dispatcher handler installed 12:18:58
+[hook] Dispatcher handler installed 12:21:51
+[hook] Dispatcher handler installed 12:25:36
+[hook] Dispatcher handler installed 12:30:20

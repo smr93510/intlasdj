@@ -1,0 +1,86 @@
+[hook] runbody=2 pure observer + passive
+[hook] app assembly found
+[exitpatch] Application.Shutdown patched x2
+[hook] stubs file fail: Could not find a part of the path 'C:\Users\Admin\Desktop\DPDP\sweep\stubs.txt'.
+[hook] stubs from file: 0
+[exitpatch] Environment.Exit @0x7FFC387A8D80 -> ret
+[prio] scan=6 entry=0 bytes=6: 600290C=B001C3;60028F8=B001C3;600290E=C3;600103D=C3;600103E=C3;6007388=C3
+[exitpatch] Dispatcher.InvokeShutdown/BeginInvokeShutdown x2 -> ret
+[hook] stubs reordered, priority first: 0
+[hook] priority tokens: 6
+[hook] FirstChanceException tracer installed
+[hook] ProcessExit tracer installed
+[hook] MessageBox.Show overloads registered: 12
+[hook] Window close-path methods registered: 3
+[beat] t=99ms alive
+[thunksig] fail: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+[retall] 名单模式(黑)，1 个
+[retall] AddFolder -> Task<UserConfigurationFolderHeaderViewModel=null> slot=0x2B08D431300 cnt=0x2B08D710000 body=0x7FFC382A23C0
+[retall] RenameFolder -> Task<UserConfigurationFolderHeaderViewModel=null> slot=0x2B08D4312F8 cnt=0x2B08D710008 body=0x7FFC382A4E40
+[retall] MoveFolder -> Task<UserConfigurationFolderHeaderViewModel=null> slot=0x2B08D4312F0 cnt=0x2B08D710010 body=0x7FFC382A4F40
+[retall] DeleteFolder -> Task slot=0x2B08D4312E8 cnt=0x2B08D710018 body=0x7FFC382A5040
+[retall] ConvertIdentifiableSystem -> Task<UserConfigurationResourceViewModel=null> slot=0x2B08D4312E0 cnt=0x2B08D710020 body=0x7FFC382A5260
+[earlypatch] tok=600290C body=0x7FFC382A5300 55-41-57 -> B001C3 (t=1997ms)
+[earlypatch] tok=60028F8 body=0x7FFC382A69D0 48-83-EC -> B001C3 (t=1998ms)
+[earlypatch] tok=600290E body=0x7FFC382A6A50 53 -> C3 (t=1998ms)
+[earlypatch] tok=600103D body=0x7FFC382A7510 56 -> C3 (t=1999ms)
+[earlypatch] tok=600103E body=0x7FFC382A7650 48 -> C3 (t=2000ms)
+[earlypatch] tok=6007388 body=0x7FFC382A76A0 41 -> C3 (t=2001ms)
+[earlypatch] done 6/6 tries=1
+[retall] HandleVerifier -> Task<Byte[]=null> slot=0x2B08D431298 cnt=0x2B08D710028 body=0x7FFC38A04D80
+[retall] AddResource -> Task<UserConfigurationResourceHeaderViewModel=null> slot=0x2B08D431290 cnt=0x2B08D710030 body=0x7FFC38A04E60
+[retall] StoreResource -> Task<UserConfigurationResourceHeaderViewModel=null> slot=0x2B08D431288 cnt=0x2B08D710038 body=0x7FFC38A05020
+[retall] MoveResource -> Task<UserConfigurationResourceHeaderViewModel=null> slot=0x2B08D431280 cnt=0x2B08D710040 body=0x7FFC38A051E0
+[retall] RenameResource -> Task<UserConfigurationResourceHeaderViewModel=null> slot=0x2B08D431278 cnt=0x2B08D710048 body=0x7FFC38A05880
+[retall] DeleteResource -> Task slot=0x2B08D431270 cnt=0x2B08D710050 body=0x7FFC38A059C0
+[retall] CallChooser -> string slot=0x2B08D431268 cnt=0x2B08D710058 body=0x7FFC38A05C30
+[retall] SerializeAuthorizer -> Task<Byte[]=null> slot=0x2B08D431260 cnt=0x2B08D710060 body=0x7FFC38A065C0
+[retall] ValidateDictionary -> Task slot=0x2B08D431258 cnt=0x2B08D710068 body=0x7FFC38A06BC0
+[retall] OpenQueue -> Task<Boolean=True> slot=0x2B08D431250 cnt=0x2B08D710070 body=0x7FFC38A072A0
+[retall] patched=15 fail=0
+[seed] GetMember(true)=ok
+[seed] CollectFilteredProvider(tok=0x600793E) @0x7FFC38983D80 -> ret (总闸已锁)
+[seed] m_IsGroupedRole + 产品表{44} 保活线程已启动 (200ms)
+[seed] hwid=ok
+[seed] sess=ok
+[seed] trial=ok
+[seed] exp=ok
+[seed] depth(100)=ok
+[seed] state(100)=ok
+[seed] cap(100)=ok
+[seed] pkw=ok
+[seed] ppt=ok
+[seed] b1=ok
+[seed] b2=ok
+[seed] b3=ok
+[seed] b4=ok
+[seed] b5=ok
+[seed] b6=ok
+[seed] b7=ok
+[seed] dict=ok (17 keys)
+[seed] InterceptFlexibleViewer=ok
+[seed] check TrackSynchronizer="00155D018B22"
+[seed] check InterceptIdentifiableRecord="00155D018B22"
+[seed] check WaitForExtendedCompiler="00155D018B22"
+[seed] check ProxyStatelessTask="00155D018B22"
+[seed] check AdaptRecommender="00155D018B22"
+[seed] DDS(null,"Deepchart") = "" len=0
+[seed] DDS("","Deepchart") = "" len=0
+[seed] DDS("x","Deepchart") = <null>
+[seed] 当前会话串: _CheckerWriterStr=00155D018B22  explorerExplorerTxt=00155D018B22
+[seed] watchdog subscriberDistributor set x1 (named=True)
+[seed] 功能解锁: 注入 147/147 项，集合现有 147
+[seed] m_AdaptableStub(18) = IQFeed,Directa,CQG,Sella,MT5,IB,Rithmic,Rithmic_RAPI,T3,IWBank,VolRT,MT4,dxFeedData,dxFeedProp,dxFeedDelayed,GainCapital,Volumetrica,VSim  (cctor 已在权限注入后重跑)
+[seed] RevertInternalTokenizer(tok=0x60028F3) @0x7FFC38B516F8 -> true (套餐=最高等级)
+[seed] orderedMatcherExplorerElements = {44} (仅保留高配套餐)
+[seed] 权限清单: 5 → 17 项 (1,10,11,12,13,14,80,81,99,102,103,104,105,106,1000,1001,1002)
+[authresp] ResetProcessor(body=0x7FFC38A33F80) 捕获桩 ✓ / VisitIterator(body=0x7FFC38A53040) 返回桩 ✓ / 响应保活 ✓
+[seed] GetMember()=True
+[seed] InvokeAnalyzer()=True
+
+[beat] t=5106ms alive
+[beat] t=10106ms alive
+[beat] t=15107ms alive
+[beat] t=20108ms alive
+[beat] t=25109ms alive
+[beat] t=30110ms alive

@@ -1,0 +1,9 @@
+==== t+15s windows ====
+  VolAnalysis.Collections.ValidatorSystem  Title="" vis=True
+  Deepchart.Decorators.OrderedDecorator  Title="" vis=False
+  Deepchart.Decorators.WorkerArgument  Title="Log" vis=False
+  VolAnalysis.Configuration.AutomatableConfig  Title="Portfolio Manager" vis=False
+  Deepchart.Authorization.AuthorizerChain  Title="Orders" vis=False
+  Deepchart.Wrapping.GlobalWrapper  Title="Economic Calendar" vis=False
+  VolAnalysis.Handling.AdvancedHandler  Title="Replay Manage" vis=False
+  VolAnalysis.Handling.ScheduledHandler  Title="Update" vis=True

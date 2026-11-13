@@ -1,0 +1,127 @@
+### VolAnalysis.Models.MoneyManagmnetSettingsWrapper
+    System.Collections.Generic.List`1[[VolAnalysis.Models.MoneyManagmentAccountSettings, Deepchart, Version=16.1.9.0, Culture=neutral, PublicKeyToken=null]] CurrentSettings {get;set;}
+    System.Collections.Generic.List`1[[VolAnalysis.Models.MoneyManagmnetSettingsScheduleWrapper, Deepchart, Version=16.1.9.0, Culture=neutral, PublicKeyToken=null]] Schedule {get;set;}
+    [backing] System.Collections.Generic.List`1[[VolAnalysis.Models.MoneyManagmentAccountSettings, Deepchart, Version=16.1.9.0, Culture=neutral, PublicKeyToken=null]] <CurrentSettings>k__BackingField
+    [backing] System.Collections.Generic.List`1[[VolAnalysis.Models.MoneyManagmnetSettingsScheduleWrapper, Deepchart, Version=16.1.9.0, Culture=neutral, PublicKeyToken=null]] <Schedule>k__BackingField
+### VolAnalysis.Models.MoneyManagmentAccountSettings
+    System.String ConnectionHash {get;set;}
+    System.String AccountId {get;set;}
+    System.Boolean InhibitChangesUntilNextSession {get;set;}
+    System.Boolean EnableMoneyManagment {get;set;}
+    System.Boolean SymbolIncludeAllCategory {get;set;}
+    Deepchart.Viewers.ValueRecommender+CmdHistoryContextId SymbolFilterCategory {get;set;}
+    System.Boolean ExcludeSymbolNotListed {get;set;}
+    System.Boolean DLLEnable {get;set;}
+    System.Double DLLValue {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum DLLUnit {get;set;}
+    System.Boolean DPLEnable {get;set;}
+    System.Double DPLValue {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum DPLUnit {get;set;}
+    System.Boolean DPLIncludeOpenPositions {get;set;}
+    System.Boolean TLLEnable {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum TLLAction {get;set;}
+    System.Double TLLValue {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum TLLUnit {get;set;}
+    System.Boolean TLLIncludeOpenPositions {get;set;}
+    System.Int32 TLLTimedMins {get;set;}
+    System.Boolean PortLLEnable {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum PortLLAction {get;set;}
+    System.Double PortLLValue {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum PortLLUnit {get;set;}
+    System.Int32 PortLLTimedMins {get;set;}
+    System.Boolean PortPLEnable {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum PortPLAction {get;set;}
+    System.Double PortPLValue {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum PortPLUnit {get;set;}
+    System.Int32 PortPLTimedMins {get;set;}
+    System.Boolean PosLLEnable {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum PosLLAction {get;set;}
+    System.Double PosLLValue {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum PosLLUnit {get;set;}
+    System.Boolean PosLLCumulativePerSymbol {get;set;}
+    System.Int32 PosLLTimedMins {get;set;}
+    System.Boolean PosPLEnable {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum PosPLAction {get;set;}
+    System.Double PosPLValue {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum PosPLUnit {get;set;}
+    System.Boolean PosPLCumulativePerSymbol {get;set;}
+    System.Int32 PosPLTimedMins {get;set;}
+    System.Boolean MaxTradesLimitEnable {get;set;}
+    System.Int32 MaxTradesLimitValue {get;set;}
+    System.Boolean LimitTradingHoursEnable {get;set;}
+    System.TimeSpan LimitTradingHoursIniTime {get;set;}
+    System.TimeSpan LimitTradingHoursEndTime {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+QuantityLimitModeEnum QuantityLimitMode {get;set;}
+    System.Boolean FlatIfPositionsExceedQtyLimit {get;set;}
+    VolAnalysis.Models.MoneyManagmentAccountSettings+SymbolSetting[] SymbolQtys {get;set;}
+    [backing] System.String <ConnectionHash>k__BackingField
+    [backing] System.String <AccountId>k__BackingField
+    [backing] System.Boolean <InhibitChangesUntilNextSession>k__BackingField
+    [backing] System.Boolean <EnableMoneyManagment>k__BackingField
+    [backing] System.Boolean <SymbolIncludeAllCategory>k__BackingField
+    [backing] Deepchart.Viewers.ValueRecommender+CmdHistoryContextId <SymbolFilterCategory>k__BackingField
+    [backing] System.Boolean <ExcludeSymbolNotListed>k__BackingField
+    [backing] System.Boolean <DLLEnable>k__BackingField
+    [backing] System.Double <DLLValue>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum <DLLUnit>k__BackingField
+    [backing] System.Boolean <DPLEnable>k__BackingField
+    [backing] System.Double <DPLValue>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum <DPLUnit>k__BackingField
+    [backing] System.Boolean <DPLIncludeOpenPositions>k__BackingField
+    [backing] System.Boolean <TLLEnable>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum <TLLAction>k__BackingField
+    [backing] System.Double <TLLValue>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum <TLLUnit>k__BackingField
+    [backing] System.Boolean <TLLIncludeOpenPositions>k__BackingField
+    [backing] System.Int32 <TLLTimedMins>k__BackingField
+    [backing] System.Boolean <PortLLEnable>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum <PortLLAction>k__BackingField
+    [backing] System.Double <PortLLValue>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum <PortLLUnit>k__BackingField
+    [backing] System.Int32 <PortLLTimedMins>k__BackingField
+    [backing] System.Boolean <PortPLEnable>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum <PortPLAction>k__BackingField
+    [backing] System.Double <PortPLValue>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum <PortPLUnit>k__BackingField
+    [backing] System.Int32 <PortPLTimedMins>k__BackingField
+    [backing] System.Boolean <PosLLEnable>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum <PosLLAction>k__BackingField
+    [backing] System.Double <PosLLValue>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum <PosLLUnit>k__BackingField
+    [backing] System.Boolean <PosLLCumulativePerSymbol>k__BackingField
+    [backing] System.Int32 <PosLLTimedMins>k__BackingField
+    [backing] System.Boolean <PosPLEnable>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ActionEnum <PosPLAction>k__BackingField
+    [backing] System.Double <PosPLValue>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+ValueUnitEnum <PosPLUnit>k__BackingField
+    [backing] System.Boolean <PosPLCumulativePerSymbol>k__BackingField
+    [backing] System.Int32 <PosPLTimedMins>k__BackingField
+    [backing] System.Boolean <MaxTradesLimitEnable>k__BackingField
+    [backing] System.Int32 <MaxTradesLimitValue>k__BackingField
+    [backing] System.Boolean <LimitTradingHoursEnable>k__BackingField
+    [backing] System.TimeSpan <LimitTradingHoursIniTime>k__BackingField
+    [backing] System.TimeSpan <LimitTradingHoursEndTime>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+QuantityLimitModeEnum <QuantityLimitMode>k__BackingField
+    [backing] System.Boolean <FlatIfPositionsExceedQtyLimit>k__BackingField
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings+SymbolSetting[] <SymbolQtys>k__BackingField
+### VolAnalysis.Models.MoneyManagmnetSettingsScheduleWrapper
+    VolAnalysis.Models.MoneyManagmentAccountSettings Settings {get;set;}
+    System.DateTime ExpireUtc {get;set;}
+    [backing] VolAnalysis.Models.MoneyManagmentAccountSettings <Settings>k__BackingField
+    [backing] System.DateTime <ExpireUtc>k__BackingField
+### VolAnalysis.Models.MoneyManagmentStatusWrapper
+    System.Collections.Generic.List`1[[VolAnalysis.Models.MonenyManagmentStatusAccount, Deepchart, Version=16.1.9.0, Culture=neutral, PublicKeyToken=null]] AccountsStatus {get;set;}
+    [backing] System.Collections.Generic.List`1[[VolAnalysis.Models.MonenyManagmentStatusAccount, Deepchart, Version=16.1.9.0, Culture=neutral, PublicKeyToken=null]] <AccountsStatus>k__BackingField
+VolAnalysis.Models.MoneyManagmnetStatusWrapper  : <null>
+VolAnalysis.Models.UserSettingsConnection  : <null>
+VolAnalysis.Models.UserSettingsConnectionWrapper  : <null>
+VolAnalysis.Models.UserConnectionWrapper  : <null>
+VolAnalysis.Models.ConnectionSettings  : <null>
+VolAnalysis.Models.ConnectionSettingsWrapper  : <null>
+VolAnalysis.Models.VolConnection  : <null>
+VolAnalysis.Models.DatafeedConnection  : <null>
+VolAnalysis.Models.BrokerConnection  : <null>
+VolAnalysis.Models.Broker  : <null>
+VolAnalysis.Models.Brokers  : <null>
+VolAnalysis.Models.BrokerEnum  : <null>
+VolAnalysis.Models.UserSettingsWrapper  : <null>

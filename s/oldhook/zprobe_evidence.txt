@@ -1,0 +1,117 @@
+================================================================================
+ Deepchart 16.1.9 —— 「打开图表转圈/掉线」根因取证报告
+ 2026-10-02 22:40   （探针：fork patch-old + zprobe，纯观察，不改行为）
+================================================================================
+
+■ 一句话结论
+  客户端连上了历史服务器，收到的 protobuf 信封完全合法，但里面的
+  HistRespV2.Data（恒定 1024 字节）不是 Zstd、也不是任何已知压缩格式，
+  而是互相独立的随机级高熵数据 ⇒ 客户端 Zstd 必然抛异常 ⇒ 无限重试。
+  → 这不是本地补丁把字节改坏，也不是缺 flag；是服务端没有给我们可读数据。
+
+--------------------------------------------------------------------------------
+1) 网络是通的（排除"连不上"）
+--------------------------------------------------------------------------------
+  DNS  data-b.historical.deepcharts.com -> 13.226.69.110 / .63 / .82 / .61
+  TCP  Deepchart 192.168.99.130:52308 -> 13.226.69.110:443  [Established]
+
+  WS URL（静态解码确认）：
+     ViewerVerifierRecommender.AddSet(124666) == ":"
+     salt m_734306491f6840b0a17f36405b1397c7 = 1465277051
+     ⇒ wss://data-b.historical.deepcharts.com : 443 ?version=2
+       （无 token、无 compress 参数）
+
+--------------------------------------------------------------------------------
+2) 收到的报文完全合法（客户端解析没问题）
+--------------------------------------------------------------------------------
+  收包原文 zprobe_seg_1.bin（1036 字节）按 protobuf wire-format 走读：
+
+     field 2 (HistRespV2)  len=1033
+        field 1  varint = 4        -> RequestId = 4
+        field 2  varint = 2        -> Version   = 2
+        field 3  bytes  len=1024   -> Data      = 1024 bytes   <== 出问题的就这里
+        field 4  varint = 1        -> IsPartial = true
+
+  校验：1(标签) + 2(长度) + 1033 = 1036 = ArraySegment.Count  ✓ 完全自洽
+  同一时刻 PlayAnalyzer 的入参 head 与 Data 逐字节一致  ✓
+  PlayAnalyzer 全程序唯一调用点 = IsolatedCreatorViewer.cs:2467
+                                  PlayAnalyzer(HistRespV2.Data)
+
+--------------------------------------------------------------------------------
+3) Data 到底是什么（排除法）
+--------------------------------------------------------------------------------
+  样本量：3 次独立复现，共 60 条，全部 len = 1024（恒定！）
+
+  Shannon 熵             7.8135 / 7.8158 / 7.8033  bits/byte   (上限 8.0)
+  16 字节块去重          64/64、64/64、64/64      （无重复块）
+  容器魔数扫描           zstd / zstd-skippable / gzip / zlib / lz4-frame /
+                         bzip2 / xz / lzma / snappy  ->  全部 NONE
+                         连 64 KB 收包缓冲里都没有 28 B5 2F FD
+  解压尝试               zstd ✗  gzip ✗  zlib ✗  raw-deflate ✗ (含 trim4)
+                         bz2 ✗  lzma ✗  lzma-alone ✗
+  样本互撞字节数         pl1/pl2 = 1/1024, pl1/pl3 = 5/1024, pl2/pl3 = 4/1024
+                         （纯随机期望 4.0）⇒ 三次载荷彼此独立
+  首 4 字节              pl1=718AFD79  pl2=A7E52317  pl3=3871F8F8
+                         （若为固定流密钥，XOR 应呈现规律 -> 无）
+
+  ⇒ 结论：加密/拒答载荷（或服务端填充）。不是 Zstd，也不是"分片的 Zstd 流"。
+
+--------------------------------------------------------------------------------
+4) 客户端侧放大链条（为什么表现为"转圈/掉线"）
+--------------------------------------------------------------------------------
+  ZstdSharp.ThrowHelper::EnsureContentSizeOk(ulong size)
+      size == -1 -> "content size is not specified"
+      size == -2 -> "cannot be determined (invalid magic number, srcSize too small)"
+    实测抛的是 -2 = ZSTD_getFrameContentSize 判定"不是合法帧"
+
+  MemberBuffer::ObserveActiveSolver(ConcreteAllocatorTask, ArraySegment<byte> cfg)
+    -> Serializer.Deserialize<ServerResponseMsg>(cfg)
+    -> CustomPolicyStub.PlayAnalyzer(HistRespV2.Data)          <== 抛 ZstdException
+    -> catch { TrySetException(new Exception("Corrupted historical data")) }
+    -> GetHistTickFromVolServerAsync: throw ConfigWriter("historical server connection failed")
+
+  firstchance.txt 实测：21:51:09 -> 22:04:47 连续 494 次 Zstd 异常（约 1.3s 一次）
+  ⇒ 这 13.5 分钟就是用户看到的"一直转圈"；异常向上冒还会把数据源拆掉（"掉线"）
+
+  其他佐证：Documents\Deepchart\Hist Fills\*.fills  全部 0 字节
+            （即历史数据从未成功下载过，含更早的 run）
+
+  已排除的原因：
+    - 不是缺 flag：完整配置（seed=1 / featunlock=1 / authresp=1 / retall=1 /
+      plangate=1 / brokerunlock=1）下同样复现，且 hook.log 显示
+      retall patched=15、功能解锁 147/147、权限清单 5->17、GetMember()=True
+    - 不是 retall 改坏 asset：调用链是 VolServer 收包，不是本地 asset 解包
+    - v1 路径有压缩开关（GlobalDefinitionList.cs:1991
+        HistResponse.IsCompressed ? SimulateLiteralInterpreter(Data) : Data），
+      但 v2 的 HistResponseV2Msg 没有 IsCompressed 字段 ⇒ v2 无条件走 Zstd
+
+--------------------------------------------------------------------------------
+5) 本轮的补丁动作
+--------------------------------------------------------------------------------
+  A. fork 修正：HO 原为自引用(?? HO)，未设 DP_HOOKOUT 时 HO=null
+     改为 env DP_HOOKOUT ?? "C:/s/oldhook/hookout"
+  B. 新增 zprobe：纯观察跳板（pass-through trampoline）
+     跳板机器码： push rax; mov rax,buf; mov [rax],rcx/rdx/r8/r9;
+                  mov r11,seq; inc qword [r11]; pop rax; mov rax,<原body>; jmp rax
+     真 body 槽按 precode 解引用计算：slot = ep + 6 + <rel32>   ← 关键修正
+     （Eazfuscator 用 rel32=0x3FFA 才是 ep+0x4000；BCL 方法不同，写死会读错）
+  C. 新增 histskip=1：优雅降级（本轮要验证的就是它）
+     把 MemberBuffer::FillPredicate(string,DateTime,DateTime?,AuthorizerConnectionStatus)
+        -> Task<List<SimpleDriverExplorer>>
+     与 MemberBuffer::ViewStaticSummarizer(...)
+        -> Task<List<JoinedContextConfig>>
+     的真 body 换成"固定返回已完成的空 List"（Task.FromResult(new List<T>())）
+     效果：取历史入口不再发请求、不再抛异常 ⇒ 图表改用实时流自行构建，
+           数据源不再被拆。
+     ⇒ 已挂载成功： FillPredicate body=0x1A22C1C0000
+                    ViewStaticSummarizer body=0x7FFB3EB73900
+
+--------------------------------------------------------------------------------
+6) 遗留 / 待定
+--------------------------------------------------------------------------------
+  * 历史回填（打开图表立即看到过去的 K 线）仍未实现 —— 需要服务端给出可读的
+    HistRespV2.Data。若确认是"服务端按会话/授权区分载荷"，则需要把会话做成
+    服务端认的合法身份，而不是在数据通路上继续打补丁。
+  * 下一步（若 histskip 验证通过）：把这套补丁从托管 hook 移植成 C++ 原生
+    （按用户既定路线），落点与 zprobe/histskip 完全一致。
+================================================================================

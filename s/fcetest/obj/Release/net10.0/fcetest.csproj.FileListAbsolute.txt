@@ -1,0 +1,14 @@
+C:\s\fcetest\bin\Release\net10.0\fcetest.exe
+C:\s\fcetest\bin\Release\net10.0\fcetest.deps.json
+C:\s\fcetest\bin\Release\net10.0\fcetest.runtimeconfig.json
+C:\s\fcetest\bin\Release\net10.0\fcetest.dll
+C:\s\fcetest\bin\Release\net10.0\fcetest.pdb
+C:\s\fcetest\obj\Release\net10.0\fcetest.GeneratedMSBuildEditorConfig.editorconfig
+C:\s\fcetest\obj\Release\net10.0\fcetest.AssemblyInfoInputs.cache
+C:\s\fcetest\obj\Release\net10.0\fcetest.AssemblyInfo.cs
+C:\s\fcetest\obj\Release\net10.0\fcetest.csproj.CoreCompileInputs.cache
+C:\s\fcetest\obj\Release\net10.0\fcetest.dll
+C:\s\fcetest\obj\Release\net10.0\refint\fcetest.dll
+C:\s\fcetest\obj\Release\net10.0\fcetest.pdb
+C:\s\fcetest\obj\Release\net10.0\fcetest.genruntimeconfig.cache
+C:\s\fcetest\obj\Release\net10.0\ref\fcetest.dll

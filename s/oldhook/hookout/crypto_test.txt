@@ -1,0 +1,4 @@
+enc=True dec=True
+密文长度=204 前60=aHlK4lnLKR6/kyGazWw4pCVGOsHONvuxVnPEHrTq0ev50I+vs1xdo+HrOC1Y
+回解结果=[{"ConnectionId":"abc","Name":"测试连接","Broker":4,"Param":"{}"}]
+往返一致=True

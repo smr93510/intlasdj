@@ -1,0 +1,17 @@
+runbody=2
+seed=1
+retall=1
+retallonly=1
+retallblack=1
+retaskdelay=1500
+exitpatch=0
+envexitpatch=1
+wpfexitpatch=1
+featunlock=1
+brokerunlock=1
+plangate=1
+authresp=1
+gateprobe=1
+zprobe=1
+histskip=0
+histempty=1

@@ -1,0 +1,8 @@
+[
+  {
+    "ConnectionId": "dxfeed-delayed-1",
+    "Name": "dxFeed 15min Delayed",
+    "Broker": 100,
+    "Param": "{}"
+  }
+]
