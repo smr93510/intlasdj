@@ -1,0 +1,16 @@
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.AssemblyInfo.cs
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DPDP\patch-old\bin\Release\net10.0-windows\DeepHook.deps.json
+C:\Users\Admin\Desktop\DPDP\patch-old\bin\Release\net10.0-windows\DeepHook.runtimeconfig.json
+C:\Users\Admin\Desktop\DPDP\patch-old\bin\Release\net10.0-windows\DeepHook.dll
+C:\Users\Admin\Desktop\DPDP\patch-old\bin\Release\net10.0-windows\DeepHook.pdb
+C:\Users\Admin\Desktop\DPDP\patch-old\bin\Release\net10.0-windows\dnlib.dll
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.csproj.Up2Date
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.dll
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\refint\DeepHook.dll
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.pdb
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\DeepHook.genruntimeconfig.cache
+C:\Users\Admin\Desktop\DPDP\patch-old\obj\Release\net10.0-windows\ref\DeepHook.dll
